@@ -1,28 +1,28 @@
-// Controla as abas da galeria
+// troca as abas da galeria
 
 function abrirAba(nomeAba) {
 
     const conteudos = document.querySelectorAll(".conteudo-aba");
     const botoes = document.querySelectorAll(".aba");
 
-    // Esconde todas as abas
+    // esconde as abas
     conteudos.forEach(function (conteudo) {
         conteudo.classList.remove("ativa");
     });
 
-    // Remove a seleção dos botões
+    // tira a seleção dos botões
     botoes.forEach(function (botao) {
         botao.classList.remove("ativa");
     });
 
-    // Mostra a aba escolhida
+    // mostra a aba escolhida
     const aba = document.getElementById(nomeAba);
 
     if (aba) {
         aba.classList.add("ativa");
     }
 
-    // Marca o botão clicado
+    // marca o botão escolhido
     botoes.forEach(function (botao) {
 
         const texto = botao.textContent.toLowerCase();
@@ -46,7 +46,7 @@ function abrirAba(nomeAba) {
 }
 
 
-// Quando a página carregar
+// espera a página carregar
 
 document.addEventListener("DOMContentLoaded", function () {
 
